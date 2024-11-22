@@ -29,7 +29,7 @@ class ShortenUrlRestControllerTest {
     void redirectTest() throws Exception {
         String expectedOriginalUrl = "https://www.hanbit.co.kr/";
 
-        when(simpleShortenUrlService.getOriginalUrlBytShortenUrlKey(any())).thenReturn(expectedOriginalUrl);
+        when(simpleShortenUrlService.getOriginalUrlByShortenUrlKey(any())).thenReturn(expectedOriginalUrl);
 
         mockMvc.perform(get("/any-key"))
                 .andExpect(status().isMovedPermanently())

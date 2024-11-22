@@ -33,7 +33,7 @@ public class ShortenUrlRestController {
     // 리다이렉트 하는 코드
     @RequestMapping(value ="/{shortenUrlKey}", method = RequestMethod.GET)
     public ResponseEntity<?> redirectShortenUrl(@PathVariable String shortenUrlKey) throws URISyntaxException {
-            String originalUrl = simpleShortenUrlService.getOriginalUrlBytShortenUrlKey(shortenUrlKey);
+            String originalUrl = simpleShortenUrlService.getOriginalUrlByShortenUrlKey(shortenUrlKey);
 
             URI redirectUri = new URI(originalUrl);
             HttpHeaders httpHeaders = new HttpHeaders();

@@ -41,7 +41,7 @@ public class ShortenUrl {
         return shortenUrlKey.toString();
     }
 
-    public void increasedRedirectCount() {
+    public void increaseRedirectCount() {
         this.redirectCount +=1;
     }
 
